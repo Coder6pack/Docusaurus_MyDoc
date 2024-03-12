@@ -44,29 +44,26 @@ const config: Config = {
 
   presets: [
     [
-      "classic",
+      "@docusaurus/preset-classic",
       {
+        pages: {
+          path: "src/pages",
+          routeBasePath: "",
+          include: ["**/*.{js,jsx,ts,tsx,md,mdx}"],
+          exclude: [
+            "**/_*.{js,jsx,ts,tsx,md,mdx}",
+            "**/_*/**",
+            "**/*.test.{js,jsx,ts,tsx}",
+            "**/__tests__/**",
+          ],
+          mdxPageComponent: "@theme/MDXPage",
+        },
         theme: {
           customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
   ],
-
-  themeConfig: {
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-    },
-    docs: {
-      sidebar: {
-        hideable: false,
-      },
-    },
-    navbar: {
-      hideOnScroll: false,
-    },
-  } satisfies Preset.ThemeConfig,
 };
 
 export default config;
