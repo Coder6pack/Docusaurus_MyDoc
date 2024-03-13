@@ -18,7 +18,6 @@ export default function FooterWrapper({ chidren }: Props): JSX.Element {
         <HeaderDetail />
         <PostDetail />
         <Footer />
-        **Heloo**
         {chidren}
       </>
     </MDXProvider>

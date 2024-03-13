@@ -1,7 +1,10 @@
 import Link from "@docusaurus/Link";
 import React from "react";
 
-export default function HeaderDetail() {
+interface Props {
+  content?: string;
+}
+export default function HeaderDetail({ content }: Props) {
   return (
     <header>
       <div className="columns-6xl mx-32">
@@ -24,7 +27,7 @@ export default function HeaderDetail() {
             </span>
           </div>
           <div className="w-[80%] text-wrap text-textTitle text-5xl font-bold">
-            A Deep Dive into Comparison: Redis vs Memcached
+            {content}
           </div>
           <div className="flex items-center mt-6 gap-2">
             <img
